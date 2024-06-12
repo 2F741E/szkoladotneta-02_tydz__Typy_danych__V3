@@ -361,3 +361,10 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/02_tydz__Typy_danych__V3/Menu.cs
+/02_tydz__Typy_danych__V3/Exercise1.cs
+/02_tydz__Typy_danych__V3/Exercise2.cs
+/02_tydz__Typy_danych__V3/Exercise3.cs
+/02_tydz__Typy_danych__V3/Exercise4.cs
+/02_tydz__Typy_danych__V3/Exercise5.cs
+/02_tydz__Typy_danych__V3/Program.cs
