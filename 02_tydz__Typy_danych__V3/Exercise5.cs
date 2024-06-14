@@ -15,10 +15,15 @@ namespace _02_tydz__Typy_danych__V3
             {
                 Console.Clear();
                 Console.WriteLine("Zadanie 5");
+                Console.WriteLine();
 
                 // początek zadania
+                Console.WriteLine("Program prosi użytkownika o jego dane personalne tj.");
+                Console.WriteLine("imię, nazwisko,numer telefonu, adres email, wzrost, waga (np. 85,7), itp".);
+                Console.WriteLine("Odpowiedź jest przekonwertowana do odpowiedniego typu danych");
+                Console.WriteLine("z użyciem metody: typDanych.Parse(odpowiedźOdUżytkownika).");
                 Console.WriteLine();
-                Console.WriteLine();
+
                 // koniec zadania
 
                 Console.WriteLine();

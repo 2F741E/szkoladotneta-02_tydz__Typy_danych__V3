@@ -15,10 +15,12 @@ namespace _02_tydz__Typy_danych__V3
             {
                 Console.Clear();
                 Console.WriteLine("Zadanie 3");
+                Console.WriteLine();
 
                 // początek zadania
-                Console.WriteLine();
-                Console.WriteLine();
+                Console.WriteLine("Program na podstawie podanej szerokości i długości prostokąta");
+                Console.WriteLine("wylicza długość przekątnej.");
+                Console.WriteLine("Do obliczenia kwadratu liczby użyto metody Math.Pow())");
                 // koniec zadania
 
                 Console.WriteLine();

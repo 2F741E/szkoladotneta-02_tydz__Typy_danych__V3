@@ -15,6 +15,7 @@ namespace _02_tydz__Typy_danych__V3
             {
                 Console.Clear();
                 Console.WriteLine("Zadanie 1");
+                Console.WriteLine();
 
                 // początek zadania
                 Console.WriteLine("Program deklaruje zmienne odpowiednich typów dotyczące danych pracownika firmy.");
