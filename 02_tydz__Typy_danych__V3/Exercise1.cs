@@ -16,7 +16,6 @@ namespace _02_tydz__Typy_danych__V3
             char gender;
             long pesel;
             double employeeNumber;
-            char controlGame;
             bool isCorectType;
 
             bool game = true;
@@ -57,7 +56,8 @@ namespace _02_tydz__Typy_danych__V3
                 do
                 {
                     Console.Write("płeć (k/m) \t");
-                    gender = Char.Parse(Console.ReadLine());
+                    //gender = Char.Parse(Console.ReadLine());
+                    gender = Console.ReadKey().KeyChar;
                     if (gender != 'k' && gender != 'm' && gender != 'K' && gender != 'M')
                     {
                         Announcement("Podana płeć");
