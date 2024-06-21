@@ -12,7 +12,8 @@ namespace _02_tydz__Typy_danych__V3
         public static void Start()
         {
             string firstName, surName;
-            int age;
+            string ageText;
+            double age;
             char gender;
             long pesel;
             double employeeNumber;
@@ -34,8 +35,7 @@ namespace _02_tydz__Typy_danych__V3
                 Console.WriteLine("d. Płeć (‘m’ albo ‘k’)");
                 Console.WriteLine("e. PESEL");
                 Console.WriteLine("f. Numer pracownika (np. 2509324094)");
-
-                Console.Clear();
+                Console.WriteLine();
                 Console.WriteLine("Proszę o podanie następujących danych:");
                 Console.WriteLine();
                 Console.Write("imię \t\t");
@@ -45,13 +45,18 @@ namespace _02_tydz__Typy_danych__V3
                 do
                 {
                     Console.Write("wiek: \t\t");
-                    isCorectType = Int32.TryParse(Console.ReadLine(), out age);
-                    if (!isCorectType)
+                    ageText = Console.ReadLine();
+                    isCorectType = double.TryParse(ageText, out age);
+                    if (!isCorectType || age <= 0)
                     {
-                        Announcement("Podany wiek");
+                        Console.WriteLine();
+                        Console.WriteLine("Podany wiek pracownika jest nieprawidłowy");
+                        Console.WriteLine("Wiek pracownika jest liczbą większą od zera");
+                        Console.WriteLine("spróbuj ponownie");
+                        Console.WriteLine();
                     }
                 }
-                while (!isCorectType);
+                while (!isCorectType || age <= 0);
 
                 do
                 {
