@@ -16,8 +16,10 @@ namespace _02_tydz__Typy_danych__V3
             double age;
             char gender;
             string genderText = "kobieta";
+            string peselText;
             long pesel;
-            double employeeNumber;
+            string employeeText;
+            uint employeeNumber;
             bool isCorectType;
 
             bool game = true;
@@ -82,23 +84,33 @@ namespace _02_tydz__Typy_danych__V3
                 do
                 {
                     Console.Write("PESEL \t\t");
-                    isCorectType = long.TryParse(Console.ReadLine(), out pesel);
-                    if (!isCorectType)
+                    peselText = Console.ReadLine();
+                    isCorectType = long.TryParse(peselText, out pesel);
+                    if (!isCorectType || pesel < 0 || peselText.Length != 11)
                     {
-                        //Announcement("Podany nr pesel");
+                        Console.WriteLine();
+                        Console.WriteLine("Podany PESEL pracownika jest nieprawidłowy.");
+                        Console.WriteLine("PESEL powinien zawierać cyfry od 0 do 9");
+                        Console.WriteLine("spróbuj ponownie");
+                        Console.WriteLine();
                     }
                 }
-                while (!isCorectType);
+                while (!isCorectType || pesel < 0 || peselText.Length != 11);
                 do
                 {
                     Console.Write("nr pracownika \t");
-                    isCorectType = Double.TryParse(Console.ReadLine(), out employeeNumber);
-                    if (!isCorectType)
+                    employeeText = Console.ReadLine();
+                    isCorectType = uint.TryParse(employeeText, out employeeNumber);
+                    if (!isCorectType || employeeNumber <= 0)
                     {
-                        //Announcement("Podany nr pracownika");
+                        Console.WriteLine();
+                        Console.WriteLine("Podany nr pracownika jest nieprawidłowy.");
+                        Console.WriteLine("Nr pracownika powinien być dodatni");
+                        Console.WriteLine("spróbuj ponownie");
+                        Console.WriteLine();
                     }
                 }
-                while (!isCorectType);
+                while (!isCorectType || employeeNumber <= 0);
 
                 Console.WriteLine();
                 Console.WriteLine();
