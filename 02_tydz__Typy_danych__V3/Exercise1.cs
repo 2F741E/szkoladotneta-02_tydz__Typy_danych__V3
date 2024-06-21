@@ -15,6 +15,7 @@ namespace _02_tydz__Typy_danych__V3
             string ageText;
             double age;
             char gender;
+            string genderText = "kobieta";
             long pesel;
             double employeeNumber;
             bool isCorectType;
@@ -65,18 +66,26 @@ namespace _02_tydz__Typy_danych__V3
                     gender = Console.ReadKey().KeyChar;
                     if (gender != 'k' && gender != 'm' && gender != 'K' && gender != 'M')
                     {
-                        Announcement("Podana płeć");
+                        Console.WriteLine();
+                        Console.WriteLine("Podana płeć pracownika jest nieprawidłowa.");
+                        Console.WriteLine("Wybierz k dla kobiety, m dla mężczyzny");
+                        Console.WriteLine("spróbuj ponownie");
+                        Console.WriteLine();
                     }
 
                 }
                 while (gender != 'k' && gender != 'm' && gender != 'K' && gender != 'M');
+                if (gender != 'k' && gender != 'K')
+                {
+                    genderText = "mężczyzna";
+                }
                 do
                 {
                     Console.Write("PESEL \t\t");
                     isCorectType = long.TryParse(Console.ReadLine(), out pesel);
                     if (!isCorectType)
                     {
-                        Announcement("Podany nr pesel");
+                        //Announcement("Podany nr pesel");
                     }
                 }
                 while (!isCorectType);
@@ -86,7 +95,7 @@ namespace _02_tydz__Typy_danych__V3
                     isCorectType = Double.TryParse(Console.ReadLine(), out employeeNumber);
                     if (!isCorectType)
                     {
-                        Announcement("Podany nr pracownika");
+                        //Announcement("Podany nr pracownika");
                     }
                 }
                 while (!isCorectType);
@@ -126,13 +135,5 @@ namespace _02_tydz__Typy_danych__V3
                 }
             } while (game);
         }
-
-        private static void Announcement(string text)
-        {
-            Console.WriteLine();
-            Console.WriteLine(text + " jest niepoprawny, spróbuj powtórnie");
-            Console.WriteLine();
-        }
-        
     }
 }
