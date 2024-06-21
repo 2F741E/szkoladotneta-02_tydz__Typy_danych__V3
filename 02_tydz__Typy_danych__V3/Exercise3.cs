@@ -10,6 +10,9 @@ namespace _02_tydz__Typy_danych__V3
     {
         public static void Start()
         {
+            double lenght, width, diagonal;
+            bool isCorectType;
+
             bool game = true;
             do
             {
@@ -21,6 +24,44 @@ namespace _02_tydz__Typy_danych__V3
                 Console.WriteLine("Program na podstawie podanej szerokości i długości prostokąta");
                 Console.WriteLine("wylicza długość przekątnej.");
                 Console.WriteLine("Do obliczenia kwadratu liczby użyto metody Math.Pow())");
+
+                Console.Clear();
+                Console.WriteLine("Proszę o podanie wymiarów prostokąta:");
+                Console.WriteLine();
+                do
+                {
+                    Console.Write("długość: \t");
+                    isCorectType = double.TryParse(Console.ReadLine(), out lenght);
+                    if (!isCorectType)
+                    {
+                        Announcement("To nie jest poprawna liczba");
+                    }
+                    if (lenght < 0)
+                    {
+                        Announcement("Długość nie może być liczbą ujemną");
+                    }
+                }
+                while (!isCorectType || lenght < 0);
+                do
+                {
+                    Console.Write("szerokość: \t");
+                    isCorectType = double.TryParse(Console.ReadLine(), out width);
+                    if (!isCorectType)
+                    {
+                        Announcement("To nie jest poprawna liczba");
+                    }
+                    if (lenght < 0)
+                    {
+                        Announcement("Szerokość nie może być liczbą ujemną");
+                    }
+                }
+                while (!isCorectType || width < 0);
+
+                diagonal = Math.Sqrt(Math.Pow(lenght, 2) + Math.Pow(width, 2));
+
+                Console.WriteLine();
+                Console.WriteLine($"przekątna prostokąta wynosi {diagonal}");
+
                 // koniec zadania
 
                 Console.WriteLine();
@@ -43,6 +84,13 @@ namespace _02_tydz__Typy_danych__V3
                         break;
                 }
             } while (game);
+        }
+
+        private static void Announcement(string text)
+        {
+            Console.WriteLine();
+            Console.WriteLine(text + " , spróbuj powtórnie");
+            Console.WriteLine();
         }
     }
 }
