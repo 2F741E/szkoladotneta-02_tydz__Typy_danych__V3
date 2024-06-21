@@ -52,5 +52,11 @@ namespace _02_tydz__Typy_danych__V3
             } while (game);
         }
 
+        private static void Announcement(string text)
+        {
+            Console.WriteLine();
+            Console.WriteLine(text + " jest niepoprawny, spróbuj powtórnie");
+            Console.WriteLine();
+        }
     }
 }
