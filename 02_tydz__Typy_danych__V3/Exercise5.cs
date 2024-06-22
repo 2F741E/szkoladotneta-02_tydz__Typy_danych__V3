@@ -53,11 +53,12 @@ namespace _02_tydz__Typy_danych__V3
                 surName = Console.ReadLine();
                 do
                 {
-                    Console.Write("płeć (k/m) \t\t");
+                    Console.Write("płeć (k/m) \t");
                     //isCorectType = Char.TryParse(Console.ReadLine(), out gender);
                     gender = Console.ReadKey().KeyChar;
                     if (gender != 'k' && gender != 'm' && gender != 'K' && gender != 'M')
                     {
+                        Console.WriteLine();
                         Console.WriteLine();
                         Console.WriteLine("Podana płeć osoby jest nieprawidłowa.");
                         Console.WriteLine("Wybierz k dla kobiety, m dla mężczyzny");
@@ -70,6 +71,7 @@ namespace _02_tydz__Typy_danych__V3
                 {
                     genderText = "mężczyzna";
                 }
+                Console.WriteLine();
                 Console.Write("narodowość \t");
                 nationality = Console.ReadLine();
                 Console.Write("obywatelstwo \t");
@@ -122,7 +124,7 @@ namespace _02_tydz__Typy_danych__V3
                 while (!isCorectType || weight <= 0);
                 do
                 {
-                    Console.Write("wzrost: \t\t");
+                    Console.Write("wzrost: \t");
                     growthText = Console.ReadLine();
                     isCorectType = double.TryParse(growthText, out growth);
                     if (!isCorectType || growth <= 0)
