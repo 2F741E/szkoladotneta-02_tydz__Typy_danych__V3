@@ -75,7 +75,6 @@ namespace _02_tydz__Typy_danych__V3
                         Console.WriteLine("spróbuj ponownie");
                         Console.WriteLine();
                     }
-
                 }
                 while (gender != 'k' && gender != 'm' && gender != 'K' && gender != 'M');
                 if (gender != 'k' && gender != 'K')
@@ -91,7 +90,7 @@ namespace _02_tydz__Typy_danych__V3
                     {
                         Console.WriteLine();
                         Console.WriteLine("Podany PESEL pracownika jest nieprawidłowy.");
-                        Console.WriteLine("PESEL powinien zawierać cyfry od 0 do 9");
+                        Console.WriteLine("PESEL powinien zawierać 11 cyfr od 0 do 9");
                         Console.WriteLine("spróbuj ponownie");
                         Console.WriteLine();
                     }

@@ -28,6 +28,8 @@ namespace _02_tydz__Typy_danych__V3
             Console.WriteLine("Choose - Arrow Up (" + Strings.ChrW(8593) + "), Arrow Down (" + Strings.ChrW(8595) + ")");
             Console.WriteLine("Accept - Enter (" + Strings.ChrW(8626) + ")");
             Console.WriteLine("Finish - Esc or Delete or End");
+            Console.WriteLine();
+            Console.WriteLine("UWAGA: kliknij kursorem myszy w okienku terminala");
         }
 
         public static void CursorPosition(int position, string txt)
