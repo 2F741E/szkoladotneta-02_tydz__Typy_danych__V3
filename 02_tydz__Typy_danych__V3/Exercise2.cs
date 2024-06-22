@@ -44,7 +44,7 @@ namespace _02_tydz__Typy_danych__V3
 
                 Console.WriteLine();
                 Console.WriteLine("ESC or DELETE or END - powrót do menu głównego");
-                Console.WriteLine("(inny klawisz        - ponowny start programu)");
+                Console.WriteLine("(inny klawisz        - ponowny start zadania)");
 
                 switch (Console.ReadKey().Key)
                 {
