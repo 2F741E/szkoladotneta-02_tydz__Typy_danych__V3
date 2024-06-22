@@ -14,6 +14,7 @@ namespace _02_tydz__Typy_danych__V3
             bool isCorectType;
 
             bool game = true;
+            Console.CursorVisible = true;
             do
             {
                 Console.Clear();
@@ -25,9 +26,23 @@ namespace _02_tydz__Typy_danych__V3
                 Console.WriteLine("wylicza długość przekątnej.");
                 Console.WriteLine("Do obliczenia kwadratu liczby użyto metody Math.Pow())");
 
-                Console.Clear();
+                Console.WriteLine();
                 Console.WriteLine("Proszę o podanie wymiarów prostokąta:");
                 Console.WriteLine();
+                do
+                {
+                    Console.Write("szerokość: \t");
+                    isCorectType = double.TryParse(Console.ReadLine(), out width);
+                    if (!isCorectType)
+                    {
+                        Announcement("To nie jest poprawna liczba");
+                    }
+                    if (width < 0)
+                    {
+                        Announcement("Szerokość nie może być liczbą ujemną");
+                    }
+                }
+                while (!isCorectType || width < 0);
                 do
                 {
                     Console.Write("długość: \t");
@@ -42,20 +57,6 @@ namespace _02_tydz__Typy_danych__V3
                     }
                 }
                 while (!isCorectType || lenght < 0);
-                do
-                {
-                    Console.Write("szerokość: \t");
-                    isCorectType = double.TryParse(Console.ReadLine(), out width);
-                    if (!isCorectType)
-                    {
-                        Announcement("To nie jest poprawna liczba");
-                    }
-                    if (lenght < 0)
-                    {
-                        Announcement("Szerokość nie może być liczbą ujemną");
-                    }
-                }
-                while (!isCorectType || width < 0);
 
                 diagonal = Math.Sqrt(Math.Pow(lenght, 2) + Math.Pow(width, 2));
 
@@ -84,6 +85,7 @@ namespace _02_tydz__Typy_danych__V3
                         break;
                 }
             } while (game);
+            Console.CursorVisible = false;
         }
 
         private static void Announcement(string text)

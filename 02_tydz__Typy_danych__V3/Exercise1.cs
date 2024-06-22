@@ -23,6 +23,7 @@ namespace _02_tydz__Typy_danych__V3
             bool isCorectType;
 
             bool game = true;
+            Console.CursorVisible = true;
             do
             {
                 Console.Clear();
@@ -146,6 +147,7 @@ namespace _02_tydz__Typy_danych__V3
                         break;
                 }
             } while (game);
+            Console.CursorVisible = false;
         }
     }
 }

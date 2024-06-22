@@ -11,6 +11,7 @@ namespace _02_tydz__Typy_danych__V3
         public static void Start()
         {
             bool game = true;
+            Console.CursorVisible = true;
             do
             {
                 Console.Clear();
@@ -60,6 +61,7 @@ namespace _02_tydz__Typy_danych__V3
                         break;
                 }
             } while (game);
+            Console.CursorVisible = false;
         }
 
         private static void Announcement(string text)
