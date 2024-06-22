@@ -16,7 +16,7 @@ namespace _02_tydz__Typy_danych__V3
             double age;
             char gender;
             string genderText = "kobieta";
-            string peselText;
+            string peselText = "00000000000";
             long pesel;
             string employeeText;
             uint employeeNumber;
@@ -118,9 +118,9 @@ namespace _02_tydz__Typy_danych__V3
                 Console.WriteLine();
                 Console.WriteLine($"imię: \t\t{firstName}");
                 Console.WriteLine($"nazwisko: \t{surName}");
-                Console.WriteLine($"wiek: \t\t{age} lat");
-                Console.WriteLine($"płeć: \t\t{gender} (k - kobieta, m - mężczyzna)");
-                Console.WriteLine($"PESEL: \t\t{pesel}");
+                Console.WriteLine($"wiek: \t\t{age}");
+                Console.WriteLine($"płeć: \t\t{genderText}");
+                Console.WriteLine($"PESEL: \t\t{peselText}");
                 Console.WriteLine($"nr pracownika: \t{employeeNumber}");
                 Console.WriteLine();
 

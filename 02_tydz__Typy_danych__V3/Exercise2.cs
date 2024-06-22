@@ -17,13 +17,30 @@ namespace _02_tydz__Typy_danych__V3
                 Console.WriteLine("Zadanie 2");
                 Console.WriteLine();
 
-                // początek zadania
-                Console.WriteLine("Program, który tworzy 3 zmienne z jedną literą,");
+                Console.WriteLine("Program tworzy 3 zmienne z jedną literą,");
                 Console.WriteLine("a następnie wypisuje je w odwrotnej kolejności niż zostały zadeklarowane");
+                Console.WriteLine();
+                Console.WriteLine("podaj wartości trzech poniżej podanych zmiennych:");
+                Console.WriteLine();
 
-                // koniec zadania
+                // początek zadania
+                Console.Write("a = ");
+                string a = Console.ReadLine();
+                Console.Write("b = ");
+                string b = Console.ReadLine();
+                Console.Write("c = ");
+                string c = Console.ReadLine();
 
                 Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("Oto 3 zmienne wyświetlone w odwrotnej kolejności niż zostały zadeklarowane i wczytane");
+                Console.WriteLine();
+                Console.WriteLine($"zmienna c: {c}");
+                Console.WriteLine($"zmienna b: {b}");
+                Console.WriteLine($"zmienna a: {a}");
+                Console.WriteLine();
+                // koniec zadania
+
                 Console.WriteLine();
                 Console.WriteLine("ESC or DELETE or END - powrót do menu głównego");
                 Console.WriteLine("(inny klawisz        - ponowny start programu)");
